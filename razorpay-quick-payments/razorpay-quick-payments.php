@@ -4,7 +4,7 @@
  * Plugin Name: Razorpay Quick Payments
  * Plugin URI: https://github.com/razorpay/razorpay-quick-payments
  * Description: Quick Payments for Wordpress, by Razorpay.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: Team Razorpay
  * Author URI: https://razorpay.com/about/
  * License: GPL2
@@ -138,7 +138,7 @@ function wordpressRazorpayInit()
             if (empty($_GET['page_id']) === false)
             {
                 // Random order ID
-                $orderID = mt_rand(0, mt_getrandmax());
+                $orderID = (string)mt_rand(0, mt_getrandmax());
 
                 // Create a custom field and call it 'amount', and assign the value in paise
                 $pageID = $_GET['page_id'];
